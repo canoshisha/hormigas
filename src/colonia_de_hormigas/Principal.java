@@ -12,18 +12,18 @@ public class Principal {
         //funcion resolver
         long t_inicial, t_final;
         long t_total = 0;
-        for (int i = 0; i < 30; i++) {
-            aco = new Colonia_de_hormigas(NUM_ELEMENTOS,generar_pesos(),generar_beneficios());
-            t_inicial = System.currentTimeMillis();
-            aco.resolver(); 
-            t_final = System.currentTimeMillis();
-            t_total += t_final - t_inicial;
-        }
-        System.out.println("Tiempo de ejecución de media: " + (t_total / 30)/1000.0 + " sec.");
-        System.out.println("recorrido= " + aco.printRecorrido());//representacion binaria
-//        aco = new Colonia_de_hormigas(NUM_ELEMENTOS,generar_pesos(),generar_beneficios());
+//        for (int i = 0; i < 30; i++) {
+//            aco = new Colonia_de_hormigas(NUM_ELEMENTOS,generar_pesos(),generar_beneficios());
+//            t_inicial = System.currentTimeMillis();
+//            aco.resolver(); 
+//            t_final = System.currentTimeMillis();
+//            t_total += t_final - t_inicial;
+//        }
+//        System.out.println("Tiempo de ejecución de media: " + (t_total / 30)/1000.0 + " sec.");
+//        System.out.println("recorrido= " + aco.printRecorrido());//representacion binaria
+        aco = new Colonia_de_hormigas(NUM_ELEMENTOS,generar_pesos(),generar_beneficios());
         aco.imprimirPesosyBeneficios();
-//        aco.resolver();
+        aco.resolver();
         //imprimir todos los resultados
         System.out.println("\n\t\t\t\t ELEMENTOS SELECCIONADOS \t\t\t\t");
         aco.mejorRecorrido();

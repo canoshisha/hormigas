@@ -60,7 +60,7 @@ public class Colonia_de_hormigas {
      */
     public Colonia_de_hormigas(int num_elemen, double[] pesos, double[] beneficios) {
         numElementos = num_elemen;
-        numHormigas = (int) (this.numElementos * FACTOR);//creamos 30 hormigas
+        numHormigas = (int) (this.numElementos * FACTOR);//creamos 80 hormigas
         rastros = new double[this.numElementos];
         probTransicion = new double[this.numElementos];
         this.pesos = pesos;
