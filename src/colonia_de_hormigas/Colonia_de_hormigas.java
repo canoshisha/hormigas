@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package colonia_de_hormigas;
 
 import java.util.ArrayList;
@@ -10,10 +6,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-/**
- *
- * @author Alebuntu
- */
+
 public class Colonia_de_hormigas {
 
     // Equivale a tau_0
@@ -67,7 +60,7 @@ public class Colonia_de_hormigas {
      */
     public Colonia_de_hormigas(int num_elemen, double[] pesos, double[] beneficios) {
         numElementos = num_elemen;
-        numHormigas = (int) (this.numElementos * FACTOR);
+        numHormigas = (int) (this.numElementos * FACTOR);//creamos 30 hormigas
         rastros = new double[this.numElementos];
         probTransicion = new double[this.numElementos];
         this.pesos = pesos;
@@ -80,7 +73,6 @@ public class Colonia_de_hormigas {
      * de hormigas
      */
     public int[] resolver() {
-        imprimirPesosyBeneficios();
         inicializarRastros();           // Paso 1.
         prepararHormigas();             // Paso 2.
 
@@ -205,7 +197,7 @@ public class Colonia_de_hormigas {
 
         double denominador = 0.0;
         double numerador;
-        for (int l = 0; l < numElementos; l++) { // El denominador es común a todas las ciudades
+        for (int l = 0; l < numElementos; l++) { // El denominador es común a todas los elementos
             if (!hormiga.isUsado(l)) {       // elementos candidatos que forman J_k(r)
                 denominador += Math.pow(rastros[l], ALPHA) * Math.pow(1.0 / hormiga.calcularBeneficios(beneficios), BETA);
             }
