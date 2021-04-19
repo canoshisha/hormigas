@@ -1,7 +1,7 @@
 package colonia_de_hormigas;
 
 public class Hormiga {
-
+    private int capacidad = 3000;
     /**
      * Numero de bits que tiene nuestra solucion
      */
@@ -52,7 +52,7 @@ public class Hormiga {
      */
     protected void usarElemento(int indice, double[] pesos) {
         recorrido[indice] = 1;
-        if (calcularPeso(pesos) > 3000) {
+        if (calcularPeso(pesos) > capacidad) {
             recorrido[indice] = 0;
         }
         usados[indice] = true;
