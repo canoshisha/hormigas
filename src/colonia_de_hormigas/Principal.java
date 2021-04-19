@@ -20,8 +20,10 @@ public class Principal {
             t_total += t_final - t_inicial;
         }
         System.out.println("Tiempo de ejecución de media: " + (t_total / 30)/1000.0 + " sec.");
-        aco.imprimirPesosyBeneficios();
         System.out.println("recorrido= " + aco.printRecorrido());//representacion binaria
+//        aco = new Colonia_de_hormigas(NUM_ELEMENTOS,generar_pesos(),generar_beneficios());
+        aco.imprimirPesosyBeneficios();
+//        aco.resolver();
         //imprimir todos los resultados
         System.out.println("\n\t\t\t\t ELEMENTOS SELECCIONADOS \t\t\t\t");
         aco.mejorRecorrido();

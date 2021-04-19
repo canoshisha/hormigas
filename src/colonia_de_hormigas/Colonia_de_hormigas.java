@@ -23,7 +23,7 @@ public class Colonia_de_hormigas {
     private static final double Q = 500;
 
     //factor para carcular numero de hormigas
-    private static final double FACTOR = 0.3;
+    private static final double FACTOR = 0.8;
 
     //numero de iteraciones
     private static final int ITERACIONES = 100;
